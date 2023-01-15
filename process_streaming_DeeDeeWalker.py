@@ -2,20 +2,14 @@
 
 Streaming Process - port 9999
 
-First we need a fake stream of data. 
+Name: DeeDee Walker
 
 I'm using data from: https://www.kaggle.com/datasets/jimschacko/airlines-dataset-to-predict-a-delay
-
-But we need to reverse the order of the rows 
-so we can read oldest data first.
 
 Important! We'll stream forever - or until we 
            read the end of the file. 
            Use use Ctrl-C to stop.
            (Hit Control key and c key at the same time.)
-
-Explore more at 
-https://wiki.python.org/moin/UdpCommunication
 
 """
 
@@ -47,7 +41,6 @@ output_file_name = "out9.txt"
 # On Windows, without newline='', 
 # we'll get an extra line after each record
 output_file = open(output_file_name, "w", newline='')
-
 
 # Create a csv reader for a comma delimited file
 reader = csv.reader(input_file, delimiter=",")
