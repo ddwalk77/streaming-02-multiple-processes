@@ -5,3 +5,57 @@ This will clear the console output.
 Run the file once while the tasks are longer. 
 
 Copy and paste the terminal results (when task_duration is 3) here.
+
+STARTING UP.............................
+It's 2023-01-15 at 01:00 PM
+
+This file is running on:    nt Windows 10
+The Python version is:      3.10.8
+
+The Python interpreter is at:
+ c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda\python.exe
+
+
+DELETED tabble pets.
+CREATED table pets.
+
+P1 getting ready to insert Ace the Dog.
+P2 getting ready to insert Cooper the Rabbit.
+P3 getting ready to insert Emma the Rabbit.
+P2 ADDED Cooper the Rabbit.
+P2 getting ready to insert Dufus the Dog.
+P2 ADDED Dufus the Dog.
+Process Process-3:
+Process Process-1:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda\lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda\lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda\lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda\lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\multiple_processes.py", line 110, in process_three
+    insert_pet("P3","Emma", "Rabbit")
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\multiple_processes.py", line 102, in process_one
+    insert_pet("P1","Ace", "Dog")
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\multiple_processes.py", line 95, in insert_pet
+    cur.execute(sql)
+  File "c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\multiple_processes.py", line 95, in insert_pet
+    cur.execute(sql)
+sqlite3.OperationalError: database is locked
+sqlite3.OperationalError: database is locked
+
+(c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda) C:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes>c:/Users/ddwal/Documents/MSDA/44-671_Streaming_Data/Mod2/streaming-02-multiple-processes/.conda/python.exe c:/Users/ddwal/Documents/MSDA/44-671_Streaming_Data/Mod2/streaming-02-multiple-processes/multiple_processes.py
+
+      the time the task has the database
+      tied up during an insert statement).
+How well do the multiple, concurrent processes share a database
+when each task can take more time?
+How can we let multiple processes share a resource
+without interfering with each other?
+
+
+(c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda) C:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes>
