@@ -97,15 +97,18 @@ Do a web search to find helpful videos on anything that seems confusing.
 Python has pretty helpful error messages. 
 When you get an error, read them carefully. 
 
-- What error do you get? database is locked
-- Can you tell what line it was executing when it failed? 95, 102, 110, 108, 314 is the order on the traceback. Looks like it detected the issue once it reached line 314
+- What error do you get? 
+    - database is locked
+- Can you tell what line it was executing when it failed? 
+    - Line 95, 102, 110, 108, 314 is the order on the traceback. Looks like it detected the issue once it reached line 314
 
 
 ## Database Is Locked Error
 
 Do a web search on the sqlite3 'database is locked' error.
 
-- What do you learn? Database is locked error occurs when a user is performing two operations on a database at the same detail and connection or two users are running transactions on the same tables and changing content at the same time causing the database to lock
+- What do you learn? 
+    -   Database is locked error occurs when a user is performing two operations on a database at the same detail and connection or two users are running transactions on the same tables and changing content at the same time causing the database to lock
 - Once a process fails, it crashes the main process and everything stops. 
 
 ## Deadlock
