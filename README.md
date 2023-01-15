@@ -2,6 +2,8 @@
 
 > Multiple processes accessing a shared resource concurrently
 
+# Name: DeeDee Walker
+
 ## Oveview
 
 This example starts up a shared database and three different processes.
