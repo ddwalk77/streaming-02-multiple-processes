@@ -26,14 +26,14 @@ Executing multiple_processes.py script.
 Read the output. Read the code. 
 Try to figure out what's going on. 
 
-1. What libraries did we import?
-1. Where do we set the task_duration?
-1. How many functions are defined? 
-1. What are the function names? 
-1. In general, what does each function do? 
-1. Where does the execution begin?
-1. How many processes do we start?
-1. How many records does each process insert?
+1. What libraries did we import? sqlite3, time, multiprocessing, os, datetime, platform, sys
+1. Where do we set the task_duration? global variable task_duration
+1. How many functions are defined? 7
+1. What are the function names? create_table, drop_table, insert_pet, process_one, process_two, process_three, recreate_database
+1. In general, what does each function do? create_table: creates a table names pets; drop_table: drops a table names pets; insert_pet: inserts a record in the pets table; process_one, process_two, and process_three: all three functions call the function insert_pet, adding specific pet information; recreate_database: drops and creates the pets table
+1. Where does the execution begin? line 132 with "if __name__ == "__main__":"
+1. How many processes do we start? 3
+1. How many records does each process insert? 2
 
 In this first run, we start 3 processes, 
 each inserting 2 records into a shared database 
@@ -97,15 +97,15 @@ Do a web search to find helpful videos on anything that seems confusing.
 Python has pretty helpful error messages. 
 When you get an error, read them carefully. 
 
-- What error do you get?
-- Can you tell what line it was executing when it failed?
+- What error do you get? database is locked
+- Can you tell what line it was executing when it failed? 95, 102, 110, 108, 314 is the order on the traceback. Looks like it detected the issue once it reached line 314
 
 
 ## Database Is Locked Error
 
 Do a web search on the sqlite3 'database is locked' error.
 
-- What do you learn?
+- What do you learn? Database is locked error occurs when a user is performing two operations on a database at the same detail and connection or two users are running transactions on the same tables and changing content at the same time causing the database to lock
 - Once a process fails, it crashes the main process and everything stops. 
 
 ## Deadlock
