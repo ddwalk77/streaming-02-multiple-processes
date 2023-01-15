@@ -26,14 +26,22 @@ Executing multiple_processes.py script.
 Read the output. Read the code. 
 Try to figure out what's going on. 
 
-1. What libraries did we import? sqlite3, time, multiprocessing, os, datetime, platform, sys
-1. Where do we set the task_duration? global variable task_duration
-1. How many functions are defined? 7
-1. What are the function names? create_table, drop_table, insert_pet, process_one, process_two, process_three, recreate_database
-1. In general, what does each function do? create_table: creates a table names pets; drop_table: drops a table names pets; insert_pet: inserts a record in the pets table; process_one, process_two, and process_three: all three functions call the function insert_pet, adding specific pet information; recreate_database: drops and creates the pets table
-1. Where does the execution begin? line 132 with "if __name__ == "__main__":"
-1. How many processes do we start? 3
-1. How many records does each process insert? 2
+1. What libraries did we import? 
+    - sqlite3, time, multiprocessing, os, datetime, platform, sys
+1. Where do we set the task_duration? 
+    - global variable task_duration
+1. How many functions are defined? 
+    - 7
+1. What are the function names? 
+    - create_table, drop_table, insert_pet, process_one, process_two, process_three, recreate_database
+1. In general, what does each function do? 
+    - create_table: creates a table names pets; drop_table: drops a table names pets; insert_pet: inserts a record in the pets table; process_one, process_two, and process_three: all three functions call the function insert_pet, adding specific pet information; recreate_database: drops and creates the pets table
+1. Where does the execution begin? 
+    - line 132 with "if __name__ == "__main__":"
+1. How many processes do we start? 
+    - 3
+1. How many records does each process insert? 
+    - 2
 
 In this first run, we start 3 processes, 
 each inserting 2 records into a shared database 
