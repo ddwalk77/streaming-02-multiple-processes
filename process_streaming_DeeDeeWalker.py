@@ -48,11 +48,9 @@ output_file_name = "out9.txt"
 # we'll get an extra line after each record
 output_file = open(output_file_name, "w", newline='')
 
-# use the built0in sorted() function to get them in chronological order
-#reversed = sorted(input_file)
 
-# create a csv reader for our comma delimited data
-reader = csv.reader(reversed, delimiter=",")
+# Create a csv reader for a comma delimited file
+reader = csv.reader(input_file, delimiter=",")
 
 # Create a csv writer for a comma delimited file
 writer = csv.writer(output_file, delimiter=",")
@@ -64,31 +62,35 @@ header = next(reader)
 header_list = ["id","Airline","Flight","AirportFrom","AirportTo", "DayofWeek", "Time", "Length", "Delay"]
 writer.writerow(header_list)
 
-for row in reader:
-    # read a row from the file
-    id, Airline, Flight, AirportFrom, AirportTo, DayofWeek, Time, Length, Delay = row
+try:
 
-    # use an fstring to create a message from our data
-    # notice the f before the opening quote for our string?
-    fstring_message = f"[{id}, {Airline}, {Flight}, {AirportFrom}, {AirportTo}, {DayofWeek}, {Time}, {Length}, {Delay}]"
+    for row in reader:
+        # read a row from the file
+        id, Airline, Flight, AirportFrom, AirportTo, DayofWeek, Time, Length, Delay = row
+
+        # use an fstring to create a message from our data
+        # notice the f before the opening quote for our string?
+        fstring_message = f"[{id}, {Airline}, {Flight}, {AirportFrom}, {AirportTo}, {DayofWeek}, {Time}, {Length}, {Delay}]"
     
-    # prepare a binary (1s and 0s) message to stream
-    MESSAGE = fstring_message.encode()
+        # prepare a binary (1s and 0s) message to stream
+        MESSAGE = fstring_message.encode()
 
-    # use the socket sendto() method to send the message
-    sock.sendto(MESSAGE, address_tuple)
-    print (f"Sent: {MESSAGE} on port {port}.")
+        # use the socket sendto() method to send the message
+        sock.sendto(MESSAGE, address_tuple)
+        print (f"Sent: {MESSAGE} on port {port}.")
 
-    # put the values in a list (see the square brackets)
-    # and write the list of values to the output file
-    writer.writerow([id, Airline, Flight, AirportFrom, AirportTo, DayofWeek, Time, Length, Delay])
+        # put the values in a list (see the square brackets)
+        # and write the list of values to the output file
+        writer.writerow([id, Airline, Flight, AirportFrom, AirportTo, DayofWeek, Time, Length, Delay])
 
-    # sleep for a few seconds
-    time.sleep(3)
+        # sleep for a few seconds
+        time.sleep(3)
 
-# close the file objects to release the resources
-# this is important
-# if not closed from this process, 
-# you may not be able to move or delete the file
-output_file.close()
-input_file.close()
+except KeyboardInterrupt:
+
+    # close the file objects to release the resources
+    # this is important
+    # if not closed from this process, 
+    # you may not be able to move or delete the file
+    output_file.close()
+    input_file.close()
