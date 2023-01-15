@@ -1,10 +1,10 @@
+# Name: DeeDee Walker
+
 # streaming-02-multiple-processes
 
 > Multiple processes accessing a shared resource concurrently
 
-# Name: DeeDee Walker
-
-## Oveview
+## Overview
 
 This example starts up a shared database and three different processes.
 
@@ -130,3 +130,7 @@ with no process able to move forward and make progress.
 ## Learn More
 
 Check out Wikipedia's article on deadlock and other sources to learn how to prevent and avoid locking issues in concurrent processes. 
+
+## Stream Processing
+    - Task 3 repeated process_streaming_0.py with batchfile_0_farenheit.csv from the Module 1 repo 
+    - Task 4 was creating process_streaming_DeeDeeWalker.py with output to out9.txt
