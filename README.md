@@ -132,5 +132,6 @@ with no process able to move forward and make progress.
 Check out Wikipedia's article on deadlock and other sources to learn how to prevent and avoid locking issues in concurrent processes. 
 
 ## Stream Processing
+
     - Task 3 repeated process_streaming_0.py with batchfile_0_farenheit.csv from the Module 1 repo 
     - Task 4 was creating process_streaming_DeeDeeWalker.py with output to out9.txt
