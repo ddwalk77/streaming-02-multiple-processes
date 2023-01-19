@@ -134,4 +134,4 @@ Check out Wikipedia's article on deadlock and other sources to learn how to prev
 ## Stream Processing
 
     - Task 3 repeated process_streaming_0.py with batchfile_0_farenheit.csv from the Module 1 repo 
-    - Task 4 was creating process_streaming_DeeDeeWalker.py with output to out9.txt
+    - Task 4 was creating process_streaming_DeeDeeWalker.py with output to out9.txt. I chose to write to the file instead of a manual copy & paste. This was to demonstrate the coding for writing to a file and closing it.
