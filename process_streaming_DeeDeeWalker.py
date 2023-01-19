@@ -87,3 +87,6 @@ except KeyboardInterrupt:
     # you may not be able to move or delete the file
     output_file.close()
     input_file.close()
+
+output_file.close()
+input_file.close()
