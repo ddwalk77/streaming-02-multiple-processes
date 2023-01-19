@@ -5,23 +5,23 @@
 
  Welcome! 
 
- It's 2023-01-15 at 11:24 AM
+ It's 2023-01-18 at 09:58 PM
 
  This file is running on:    nt Windows 10
  
- The Python version is:      3.10.8
+ The Python version is:      3.10.9
  
  The Python interpreter is at: 
- c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda\python.exe
+ C:\Users\ddwal\anaconda3\envs\firstvrtenv\python.exe
 
  The active environment should be either conda OR pip (one should be None):
 
-     Active conda env is: c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda
+     Active conda env is: firstvrtenv
      Active pip env is:   None
  
  The path to the active virtual environment is:
 
- c:\Users\ddwal\Documents\MSDA\44-671_Streaming_Data\Mod2\streaming-02-multiple-processes\.conda
+ C:\Users\ddwal\anaconda3\envs\firstvrtenv
  
  The Current Working Directory (CWD) where this command was launched is:
 
