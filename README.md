@@ -144,5 +144,28 @@ Check out Wikipedia's article on deadlock and other sources to learn how to prev
 
 ## Stream Processing
 - Task 3: Repeated process_streaming_0.py with batchfile_0_farenheit.csv from the Module 1 repo 
+
 - Task 4: Created process_streaming_DeeDeeWalker.py with output to out9.txt. I chose to write to the file instead of a manual copy & paste. This was to demonstrate the coding for writing to a file and closing it.
-- Task5: UDP datagrams vs TCP protocol
+
+## UDP & TCP
+- Task 5: UDP datagrams vs TCP protocol
+https://www.spiceworks.com/tech/networking/articles/tcp-vs-udp/#:~:text=Transmission%20control%20protocol%20(TCP)%20drives,are%20crucial%20to%20internet%20operations.
+    - TCP, transmission control protocol
+        - Drives reliable data transfers 
+        - Creates and maintains a connection between the reciever and the sender while the data is being passed between them
+        - The client confirms data delivery from the server
+        - After a timeout period, the server attempts retransmission for data that is not delivered
+        - In a congested network, TCP delays data transmission
+        - It uses a three-way handshake to check for data transmission errors
+        - Uses more bandwidth
+        - Sends data in a particular sequence
+        - Think email & web browsing
+    - UDP, user datagram protocol
+        - Prioritizes speed and efficiency
+        - Does not assure delivery of the packets
+        - Mainly for real-time applications 
+        - Can handle bandwidth-intensive applications
+        - Possibility of data loss
+        - Can send large amounts of data at once
+        - No fixed order of data
+        - Think live stremaing & gaming
