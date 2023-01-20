@@ -20,6 +20,7 @@ Complete the setup at [streaming-01-getting-started](https://github.com/deniseca
 Execute about.py to generate some useful information.
 
 ## First Run
+Concurrent Multiprocess
 
 Executing multiple_processes.py script.
 
@@ -53,13 +54,24 @@ They insert a record, and get out of the database quickly.
 
 In general, we're successful and six new records get inserted. 
 
+- Task 1: Explore the output from concurrent processes. 
+    - Were activities performed in an order? Each process called by each user calls the same process if insert pet
+    - Does the order vary on multiple runs? The order of insert pet is the same process each time however each user is inserting different information at the same time
+    - What would happen if a process - or machine - dies? The process would stop where the machine died
+    - Is information lost? I imagine information loss will depend on the code and where it was running
+    These considerations are important when deciding how to implement distributed analytics solutions.
+
 ## Second Run
+Concurrent Multiprocess
 
 For the second run, modify the task_duration to make each task take 3 seconds. Run it again. 
 With the longer tasks, we now get into trouble - 
 one process will have the database open and be working on it - 
 then when another process tries to do the same, it can't and 
 we end up with an error. 
+
+- Task 2: 
+    - Increase the time and see how things go? What happens? The database becomes locked because the resources are tied up 
 
 ## Document Results After Each Run
 
@@ -110,7 +122,6 @@ When you get an error, read them carefully.
 - Can you tell what line it was executing when it failed? 
     - Line 95, 102, 110, 108, 314 is the order on the traceback. Looks like it detected the issue once it reached line 314
 
-
 ## Database Is Locked Error
 
 Do a web search on the sqlite3 'database is locked' error.
@@ -132,6 +143,6 @@ with no process able to move forward and make progress.
 Check out Wikipedia's article on deadlock and other sources to learn how to prevent and avoid locking issues in concurrent processes. 
 
 ## Stream Processing
-
-    - Task 3 repeated process_streaming_0.py with batchfile_0_farenheit.csv from the Module 1 repo 
-    - Task 4 was creating process_streaming_DeeDeeWalker.py with output to out9.txt. I chose to write to the file instead of a manual copy & paste. This was to demonstrate the coding for writing to a file and closing it.
+- Task 3: Repeated process_streaming_0.py with batchfile_0_farenheit.csv from the Module 1 repo 
+- Task 4: Created process_streaming_DeeDeeWalker.py with output to out9.txt. I chose to write to the file instead of a manual copy & paste. This was to demonstrate the coding for writing to a file and closing it.
+- Task5: UDP datagrams vs TCP protocol
